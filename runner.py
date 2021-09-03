@@ -1,4 +1,4 @@
-from power_tab import PowerTab
+from powertab import PowerTab
 
 a = PowerTab('C:\\Users\\mattk\\src\\PowerTabParser\\src\\resources\\tetris.ptb')
 

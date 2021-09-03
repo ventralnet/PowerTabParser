@@ -1,6 +1,6 @@
 import os.path
 
-from ByteReader import ByteReader
+from .byte_reader import ByteReader
 
 class PowerTab:
 
