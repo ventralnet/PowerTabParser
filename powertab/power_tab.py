@@ -3,7 +3,6 @@ import os.path
 from .byte_reader import ByteReader
 
 class PowerTab:
-
   def __init__(self, file_path):
     if not os.path.exists(file_path):
       raise Exception(f'[{file_path}] does not exist')
@@ -37,7 +36,7 @@ class PowerTab:
       # Classification is Song
       self.byte_reader.skip(1)
       self.song_info['name'] = self.byte_reader.readString()
-      self.song_info['interpret'] = self.byte_reader.readString()
+      self.song_info['artist'] = self.byte_reader.readString()
       
       release_type = self.byte_reader.readByteAsInt()
       self.song_info['release_type'] = release_type
