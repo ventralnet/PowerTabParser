@@ -33,8 +33,5 @@ class TestPowerTabReading(unittest.TestCase):
     self.assert_song_info_field('guitar_instructions', 'Test Guitar Notes')
     self.assert_song_info_field('bass_instructions', 'Test Bass Notes')
 
-  def test_get_song_info_bootleg(self):
-    pass
-
 if __name__ == '__main__':
   unittest.main()
