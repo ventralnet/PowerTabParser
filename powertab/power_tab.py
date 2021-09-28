@@ -29,6 +29,7 @@ class PowerTab:
     version = self.byte_reader.readStringLength(4)
     num = str(self.byte_reader.readShort())
     self.version = f"{version}-{num}"
+    print(self.version)
 
   def _read_song_info(self):
     self.classification = self.byte_reader.readBoolean()
@@ -56,7 +57,7 @@ class PowerTab:
         if self.byte_reader.readByte() == 0:
           self.song_info['author'] = self.byte_reader.readString()
           self.song_info['lyricist'] = self.byte_reader.readString()
-        self.song_info['arranger'] = self.byte_reader.readString()
+        self.song_info['music_by'] = self.byte_reader.readString()
         self.song_info['guitar_transcriber'] = self.byte_reader.readString()
         self.song_info['bass_transcriber'] = self.byte_reader.readString()
         self.song_info['copyright'] = self.byte_reader.readString()
